@@ -130,3 +130,6 @@ dmypy.json
 
 # Images
 images/
+
+# Bash files
+*.sh

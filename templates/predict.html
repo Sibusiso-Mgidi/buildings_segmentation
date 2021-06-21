@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <main class="px-3 my-5">
+
+        <!-- <form method="post" enctype="multipart/form-data">
+
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="uploadFile" aria-describedby="uploadButton" aria-label="Upload">
+                <button class="btn btn-secondary fw-bold border-black bg-white" type="button" id="uploadButton" >Upload</button>
+            </div>
+            <input type="submit" value="Make Prediction" class="btn btn-lg btn-secondary fw-bold border-white bg-white">
+            
+        </form> -->
+
+
+        <!-- ############### MODEL ONE ###############  -->
+        <h3 class="d-flex flex-row" >Model without data Augmentation</h3>
+        <div class="d-flex flex-row justify-content-center">
+
+            <!-- Preview Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+                <button id="prevUploadBtn" class="btn btn-secondary fw-bold border-white bg-white mb-1" type="button">Upload Image</button>
+                
+                <div class="temp-wrap">
+                    <input id="previewImageInput" class="image-input" type='file' accept="image/*" />
+                    <div class="drag-text">
+                        <h4>Drag and drop a file or select add Image</h4>
+                    </div>
+                </div>
+
+                <div class="image-upload-content">
+                    <img id="previewImage" class="uploaded-image" alt="uploaded image" />
+                </div>
+
+                <h4>Original Image</h4>
+            </div>
+
+            <!-- Mask Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+                <button id="maskUploadBtn" class="btn btn-secondary fw-bold border-white bg-white mb-1" type="button">Upload Image</button>
+                
+                <div class="temp-wrap">
+                    <input id="maskImageInput" class="image-input" type='file' accept="image/*" />
+                    <div class="drag-text">
+                        <h4>Drag and drop a file or select add Image</h4>
+                    </div>
+                </div>
+
+                <div class="image-upload-content">
+                    <img id="maskImage" class="uploaded-image" src="#" alt="uploaded mask image" />
+                </div>
+
+                <h4>Mask Image</h4>
+            </div>
+            
+            <!-- Prediction Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+                <button id="predictBtn" class="btn btn-secondary fw-bold border-white bg-white mb-1" type="button">Make Prediction</button>
+                
+                <div  class="temp-wrap">
+                    <img id="predictionImage1" class="img-fluid" >
+                </div>
+                <h4>Predicted Output</h4>
+            </div>
+
+        </div>
+        <h2>Prediction {{model_pred_1}}</h2>
+
+         <!-- ############### MODEL TWO ###############  -->
+         <h3 class="d-flex flex-row">Model without data Augmentation</h3>
+        <div class="d-flex flex-row justify-content-center">
+            
+            <!-- Preview Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+                
+                <div class="temp-wrap2">
+                    <div class="drag-text">
+                        <h4>Same image as as above</h4>
+                    </div>
+                </div>
+
+                <div class="image-upload-content2">
+                    <img id="previewImage2" class="uploaded-image" alt="uploaded image" />
+                </div>
+
+                <h4>Original Image</h4>
+            </div>
+
+            <!-- Mask Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+               
+                <div class="temp-wrap2">
+                    <div class="drag-text">
+                        <h4>Same image as as above</h4>
+                    </div>
+                </div>
+
+                <div class="image-upload-content2">
+                    <img id="maskImage2" class="uploaded-image" alt="uploaded mask image" />
+                </div>
+
+                <h4>Mask Image</h4>
+            </div>
+
+            <!-- Prediction Image -->
+            <div class="d-flex flex-column mb-2 mx-1 preview_holder">
+                <div class="temp-wrap">
+                    <img id="predictionImage2" class="img-fluid" >
+                </div>
+                <h4>Predicted Output</h4>
+            </div>
+        </div>
+        <h2>Prediction {{model_pred_2}}</h2>
+        
+
+    </main>
+
+
+{% endblock %}
