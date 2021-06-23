@@ -48,3 +48,5 @@ The aim of this project is to segment/mask buildings from the Aerial Imagery
     $ chmod +xrun.sh
     ```
 6. Run the file: `./run.sh`
+
+**Note**: Prediction will not work without launching a TensorFlow Serving sever
