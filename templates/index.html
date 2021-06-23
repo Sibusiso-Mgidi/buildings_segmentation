@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <main class="px-3">
+        <h1>Buildings Segmentation using Semantic Segmentation.</h1>
+        <p class="lead">
+            Upload an aerial image of buildings to perform semantic segmentation.
+        </p>
+
+        <p class="lead">
+            <a href="{{ url_for('static',filename='report.pdf') }}" target="_blank" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Read paper</a>
+        </p>
+    </main>
+
+{% endblock %}
