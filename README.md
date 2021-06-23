@@ -45,7 +45,7 @@ The aim of this project is to segment/mask buildings from the Aerial Imagery
     ```
 5. Turn the file `run.sh` into an executable:
     ```bash
-    $ chmod +x run.sh
+    chmod +x run.sh
     ```
 6. Run the file `run.sh`to startup Flask:
     ```bash
