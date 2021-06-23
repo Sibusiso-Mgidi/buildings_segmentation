@@ -47,9 +47,9 @@ The aim of this project is to segment/mask buildings from the Aerial Imagery
     ```bash
     $ chmod +x run.sh
     ```
-6. Run the file `run,sh`to startup Flask:
+6. Run the file `run.sh`to startup Flask:
     ```bash
     ./run.sh
     ```
 
-**Note**: Prediction will not work without launching a TensorFlow Serving sever
+**Note**: Prediction will not work without launching a TensorFlow Serving sever and without the saved_models
