@@ -4,19 +4,9 @@
 
     <main class="px-3 my-5">
 
-        <!-- <form method="post" enctype="multipart/form-data">
-
-            <div class="input-group mb-3">
-                <input type="file" class="form-control" id="uploadFile" aria-describedby="uploadButton" aria-label="Upload">
-                <button class="btn btn-secondary fw-bold border-black bg-white" type="button" id="uploadButton" >Upload</button>
-            </div>
-            <input type="submit" value="Make Prediction" class="btn btn-lg btn-secondary fw-bold border-white bg-white">
-            
-        </form> -->
-
 
         <!-- ############### MODEL ONE ###############  -->
-        <h3 class="d-flex flex-row" >Model without data Augmentation</h3>
+        <h3 class="d-flex flex-row" >Model without Data Augmentation</h3>
         <div class="d-flex flex-row justify-content-center">
 
             <!-- Preview Image -->
@@ -49,7 +39,7 @@
                 </div>
 
                 <div class="image-upload-content">
-                    <img id="maskImage" class="uploaded-image" src="#" alt="uploaded mask image" />
+                    <img id="maskImage" class="uploaded-image" alt="uploaded mask image" />
                 </div>
 
                 <h4>Mask Image</h4>
@@ -60,16 +50,21 @@
                 <button id="predictBtn" class="btn btn-secondary fw-bold border-white bg-white mb-1" type="button">Make Prediction</button>
                 
                 <div  class="temp-wrap">
-                    <img id="predictionImage1" class="img-fluid" >
+                    
                 </div>
-                <h4>Predicted Output</h4>
+
+                <div class="image-upload-content">
+                    <img id="predictionImage1" class="uploaded-image" alt="predicted image" >
+                </div>
+
+                <h4 id="pred-out-1" >Predicted Output</h4>
             </div>
 
         </div>
         <h2>Prediction {{model_pred_1}}</h2>
 
          <!-- ############### MODEL TWO ###############  -->
-         <h3 class="d-flex flex-row">Model without data Augmentation</h3>
+         <h3 class="d-flex flex-row">Model with Data Augmentation</h3>
         <div class="d-flex flex-row justify-content-center">
             
             <!-- Preview Image -->
@@ -106,10 +101,16 @@
 
             <!-- Prediction Image -->
             <div class="d-flex flex-column mb-2 mx-1 preview_holder">
-                <div class="temp-wrap">
-                    <img id="predictionImage2" class="img-fluid" >
+
+                <div  class="temp-wrap2">
+                    
                 </div>
-                <h4>Predicted Output</h4>
+
+                <div class="image-upload-content2">
+                    <img id="predictionImage2" class="uploaded-image" alt="predicted image" >
+                </div>
+
+                <h4 id="pred-out-2" >Predicted Output</h4>
             </div>
         </div>
         <h2>Prediction {{model_pred_2}}</h2>
