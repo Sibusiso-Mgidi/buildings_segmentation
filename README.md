@@ -39,7 +39,7 @@ The aim of this project is to segment/mask buildings from the Aerial Imagery
     ```bash
     export FLASK_APP=app
     export FLASK_ENV=development
-    export SECRET_KEY='secret key'
+    export SECRET_KEY='secret_key'
     export UPLOAD_FOLDER='/your/path/to/static'
     flask run
     ```
